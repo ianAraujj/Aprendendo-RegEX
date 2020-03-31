@@ -7,7 +7,7 @@ Expressões Regulares são usadas para identificar um padrão em uma string. É 
 Uma expressão regular pode definir um padrão de busca em um documento
 
 ## Buscas
-* Exemplo 01: Busca Literal
+### * Exemplo 01: Busca Literal
 
 Ex: /Ian Luccas/g
 
@@ -19,15 +19,15 @@ Ou seja, a expressão regular procura a string 'IAN' no texto
 
 Detalhe: Há caracteres que já são especiais para as expressões regulares. A expressão /./g significa qualquer caractere. Caso o caractere '.' faça parte da sua busca, então temos que usar uma barra invertida antes do caractere especial, assim '/\\\./g'
 
-* Exemplo 02: Buscar todos os telefone que terminan em 99
+### * Exemplo 02: Buscar todos os telefone que terminan em 99
 
 /-\d\d99/g: O '\d' significa qualquer dígito de 0 a 9
 
-* Exemplo 03: Encontrar, dentro da sequência de nucleotídios (DNA), uma sequência em que tenha 'G' seguindo de 2 nucleotídos qualquer e depois seguido de um 'A'
+### * Exemplo 03: Encontrar, dentro da sequência de nucleotídios (DNA), uma sequência em que tenha 'G' seguindo de 2 nucleotídos qualquer e depois seguido de um 'A'
 
 /G..A/g
 
-* Exemplo 04:
+### * Exemplo 04:
 O meta caractere ^ represneta o INÍCIO da linha, ou seja, o início de cada parágrafo. O exemplo /^Eu/gm encontra todos os parágrafos que começam com 'Eu'
 
 O \w representa qualquer caractere alfanumérico
