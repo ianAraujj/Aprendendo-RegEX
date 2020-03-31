@@ -10,6 +10,10 @@ Expressões Regulares são usadas para identificar um padrão em uma string. É 
 
 Uma expressão regular pode definir um padrão de busca em um documento
 
+## Aplicações RegEX
+* Lista telefônica
+* Código genético
+
 ## Apresentação dos Metacaracteres
 ### * Exemplo 01: Busca Literal
 
@@ -23,7 +27,9 @@ Ou seja, a expressão regular procura a string 'IAN' no texto
 
 Detalhe: Há caracteres que já são especiais para as expressões regulares. A expressão /./g significa qualquer caractere. Caso o caractere '.' faça parte da sua busca, então temos que usar uma barra invertida antes do caractere especial, assim '/\\\./g'
 
-### * Exemplo 02: Buscar todos os telefones que terminan em 99
+### * Exemplo 02: 
+
+Buscar todos os telefones que terminan em 99
 
 /-\d\d99/g: O '\d' significa qualquer dígito de 0 a 9
 
@@ -52,7 +58,4 @@ Buscar todos os caracteres de 'a' até 'f'. Para isso vamos usar os denotadores 
 
 Isso funciona também com dígitos: /[1-3]/gm
     
-
-## Aplicações RegEX
-* Lista telefônica
-* Código genético
+## Quantificadores
