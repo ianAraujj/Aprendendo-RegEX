@@ -17,7 +17,7 @@ Esse mesmo exemplo só que desconsiderando letras maiúsculas e minúsculas: /[I
 
 Ou seja, a expressão regular procura a string 'IAN' no texto
 
-Detalhe: Há caracteres que já são especiais para as expressões regulares. A expressão /./g significa qualquer caractere. Caso o caractere '.' faça parte da sua busca, então temos que usar uma barra invertida antes do caractere especial, assim \.
+Detalhe: Há caracteres que já são especiais para as expressões regulares. A expressão /./g significa qualquer caractere. Caso o caractere '.' faça parte da sua busca, então temos que usar uma barra invertida antes do caractere especial, assim '/\\\./g'
 
 * Exemplo 02: Buscar todos os telefone que terminan em 99
 
