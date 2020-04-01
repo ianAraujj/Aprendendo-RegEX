@@ -11,7 +11,7 @@ Projeto que apresenta as sintaxe básica das Expressões Regulares e também a c
 ## O que é RegEX (regular expressions)
 Expressões Regulares são usadas para identificar um padrão em uma string. É uma forma matemática usada para calcular e identificar certos caracteres usados para definir padrões numa cadeira de caracteres (strings).
 
-Uma expressão regular pode definir um padrão de busca em um documento
+Uma expressão regular pode definir um padrão de busca em um documento.
 
 ## Aplicações RegEX
 * Lista telefônica
@@ -22,9 +22,9 @@ Uma expressão regular pode definir um padrão de busca em um documento
 
 Ex: /Ian Luccas/g
 
-Esse exemplo pode ser traduzido parar: /[I][a][n]\s[L][u][c][c][a][s]/g Repare que o caractere vazio é representado por \s
+Esse exemplo pode ser traduzido parar: /```[I][a][n]\s[L][u][c][c][a][s]```/g Repare que o caractere vazio é representado por \s
 
-Esse mesmo exemplo só que desconsiderando letras maiúsculas e minúsculas: /[Ii][aA][nN]\s[Ll][uU][cC][cC][aA][sS]/g
+Esse mesmo exemplo só que desconsiderando letras maiúsculas e minúsculas: /```[Ii][aA][nN]\s[Ll][uU][cC][cC][aA][sS]```/g
 
 Ou seja, a expressão regular procura a string 'IAN' no texto
 
@@ -34,16 +34,16 @@ Detalhe: Há caracteres que já são especiais para as expressões regulares. A 
 
 Buscar todos os telefones que terminan em 99
 
-/-\d\d99/g: O '\d' significa qualquer dígito de 0 a 9
+/```-\d\d99```/g: O '\d' significa qualquer dígito de 0 a 9
 
 ### * Exemplo 03: 
 
 Encontrar, dentro da sequência de nucleotídios (DNA), uma sequência em que tenha 'G' seguindo de 2 nucleotídos qualquer e depois seguido de um 'A'
 
-/G..A/g
+/```G..A```/g
 
 ### * Exemplo 04:
-O meta caractere ^ represneta o INÍCIO da linha, ou seja, o início de cada parágrafo. O exemplo /^Eu/gm encontra todos os parágrafos que começam com 'Eu'. Detalhe que o 'm' do 'gm' vem de multilines, isso são as FLAGS da nossa busca, a flag multilines precisa ser ativada quando a sua aplicação está trabalhando com múltiplos parágrafos. O 'g' vem de global.
+O meta caractere ^ represneta o INÍCIO da linha, ou seja, o início de cada parágrafo. O exemplo /```^Eu```/gm encontra todos os parágrafos que começam com 'Eu'. Detalhe que o 'm' do 'gm' vem de multilines, isso são as FLAGS da nossa busca, a flag multilines precisa ser ativada quando a sua aplicação está trabalhando com múltiplos parágrafos. O 'g' vem de global.
 
 O \w representa qualquer caractere alfanumérico
 
@@ -51,21 +51,21 @@ O \w representa qualquer caractere alfanumérico
 
 Expressão regular para verificar se você digitou o ponto final em todos os parágrafos:
 
-/\w$/gm
+/```\w$```/gm
 
 ### * Exemplo 06: 
 
 Buscar todos os caracteres de 'a' até 'f'. Para isso vamos usar os denotadores (criadores de classe), ou seja, vamos definir nosso próprio cojunto de caracteres para a bucsa.
 
-/[abcdef]/gm ou melhor ainda /[a-f]/gm
+/```[abcdef]```/gm ou melhor ainda /```[a-f]```/gm
 
-Isso funciona também com dígitos: /[1-3]/gm
+Isso funciona também com dígitos: /```[1-3]```/gm
     
 ## Parte II: Quantificadores
 
 ### Refazendo o exemplo 02 usando quantificadores
 
-/-\d{2}99/g
+/```-\d{2}99```/g
 
 Além  de especificar a quantidade de caracteres, os quantificadores também servem quando você não sabe exatamente quantos caracteres são, mas tem o valor do mínimo e do máximo.
 
@@ -73,17 +73,17 @@ Além  de especificar a quantidade de caracteres, os quantificadores também ser
 
 Encontrar as palavras que começam com a literal 'C' e terminam com a literal 'o'
 
-/C\w{1,}o/gm
+/```C\w{1,}o```/gm
 
 ### * Exemplo 08
 
 Seleciona as palavra 'você' no singular e no plural
 
-/vocês?/gm
+/```vocês?```/gm
 
-O '?' significa que o caractere antes dele pode ou não existir. O diferente aqui é que quando encontramos um '?' na expressão regular, devemos observar o caractere anterior e não o seguinte. O '?' pode ser usado para identicicar urls com http ou https, seria assim: /https?/gm
+O '?' significa que o caractere antes dele pode ou não existir. O diferente aqui é que quando encontramos um '?' na expressão regular, devemos observar o caractere anterior e não o seguinte. O '?' pode ser usado para identicicar urls com http ou https, seria assim: /```https?```/gm
 
-O * é uma forma prática de informar que naquela posição da expressão pode haver quantas vezes possíveis aquele caractere, mas também pode não haver a ocorrência de nenhum. O '?' pode definir apenas a existência e a não existência daquele caractere. Esse mesmo exemplo pode ser feito por outras formas: /https{0,1}/gm e também assim /https*/gm
+O * é uma forma prática de informar que naquela posição da expressão pode haver quantas vezes possíveis aquele caractere, mas também pode não haver a ocorrência de nenhum. O '?' pode definir apenas a existência e a não existência daquele caractere. Esse mesmo exemplo pode ser feito por outras formas: /```https{0,1}```/gm e também assim /```https*```/gm
 
 A expressão regular usando o * é indicada porque fica mais simples para ser compreendida.
 
@@ -121,14 +121,14 @@ selecionar tudo o que não é palavra ```\W```
 
 Selecione na lista telefônica todas as Vitórias que tiverem o sobrenome Medeiros.
 
-/Vitória\s(?=Medeiros)/gm
+/```Vitória\s(?=Medeiros)``` /gm
 
-A Negação disso, ou seja, todas as Vitórias que não tiverem o sobrenome Medeiros, seria: /Vitória\s(?!Medeiros)/gm
+A Negação disso, ou seja, todas as Vitórias que não tiverem o sobrenome Medeiros, seria: /```Vitória\s(?!Medeiros)``` /gm
 
 ### * Exemplo 13
 
 Selecione no texto as palavras que estão duplicadas uma após a outra, por exemplo, "Estado ```da da``` arte com foco ...". Essa seleção pode ser usada como maneira de correção ortográfica.
 
-/\b(\w+)\s\1\b/gm
+/```\b(\w+)\s\1\b``` /gm
 
 O \b é um delimitador de palavras, limitando o início e o fim da palavra. o \1 faz referência ao primeiro grupo definido '(\w+)', um grupo está sempre entre parenteses. Em outras palavras, no texto o que tem em '(\w+)' tem que ser IGUAL ao que tem em \1
