@@ -14,7 +14,7 @@ Uma expressão regular pode definir um padrão de busca em um documento
 * Lista telefônica
 * Código genético
 
-## Apresentação dos Metacaracteres
+## Parte I: Apresentação dos Metacaracteres
 ### * Exemplo 01: Busca Literal
 
 Ex: /Ian Luccas/g
@@ -58,7 +58,7 @@ Buscar todos os caracteres de 'a' até 'f'. Para isso vamos usar os denotadores 
 
 Isso funciona também com dígitos: /[1-3]/gm
     
-## Quantificadores
+## Parte II: Quantificadores
 
 ### Refazendo o exemplo 02 usando quantificadores
 
@@ -80,3 +80,6 @@ Seleciona as palavra 'você' no singular e no plural
 
 O '?' significa que o caractere antes dele pode ou não existir. O diferente aqui é que quando encontramos um '?' na expressão regular, devemos observar o caractere anterior e não o seguinte. O '?' pode ser usado para identicicar urls com http ou https, seria assim: /https?/gm
 
+O * é uma forma prática de informar que naquela posição da expressão pode haver quantas vezes possíveis aquele caractere, mas também pode não haver a ocorrência de nenhum. O '?' pode definir apenas a existência e a não existência daquele caractere. Esse mesmo exemplo pode ser feito por outras formas: /https{0,1}/gm e também assim /https*/gm
+
+A expressão regular usando o * é indicada porque fica mais simples para ser compreendida.
