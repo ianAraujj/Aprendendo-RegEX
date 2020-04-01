@@ -59,3 +59,24 @@ Buscar todos os caracteres de 'a' até 'f'. Para isso vamos usar os denotadores 
 Isso funciona também com dígitos: /[1-3]/gm
     
 ## Quantificadores
+
+### Refazendo o exemplo 02 usando quantificadores
+
+/-\d{2}99/g
+
+Além  de especificar a quantidade de caracteres, os quantificadores também servem quando você não sabe exatamente quantos caracteres são, mas tem o valor do mínimo e do máximo.
+
+### * Exemplo 08
+
+Encontrar as palavras que começam com a literal 'C' e terminam com a literal 'o'
+
+/C\w{1,}o/gm
+
+### * Exemplo 09
+
+Seleciona as palavra 'você' no singular e no plural
+
+/vocês?/gm
+
+O '?' significa que o caractere antes dele pode ou não existir. O diferente aqui é que quando encontramos um '?' na expressão regular, devemos observar o caractere anterior e não o seguinte. O '?' pode ser usado para identicicar urls com http ou https, seria assim: /https?/gm
+
