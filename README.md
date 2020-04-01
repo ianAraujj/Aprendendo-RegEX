@@ -66,13 +66,13 @@ Isso funciona também com dígitos: /[1-3]/gm
 
 Além  de especificar a quantidade de caracteres, os quantificadores também servem quando você não sabe exatamente quantos caracteres são, mas tem o valor do mínimo e do máximo.
 
-### * Exemplo 08
+### * Exemplo 07
 
 Encontrar as palavras que começam com a literal 'C' e terminam com a literal 'o'
 
 /C\w{1,}o/gm
 
-### * Exemplo 09
+### * Exemplo 08
 
 Seleciona as palavra 'você' no singular e no plural
 
