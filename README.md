@@ -83,3 +83,27 @@ O '?' significa que o caractere antes dele pode ou não existir. O diferente aqu
 O * é uma forma prática de informar que naquela posição da expressão pode haver quantas vezes possíveis aquele caractere, mas também pode não haver a ocorrência de nenhum. O '?' pode definir apenas a existência e a não existência daquele caractere. Esse mesmo exemplo pode ser feito por outras formas: /https{0,1}/gm e também assim /https*/gm
 
 A expressão regular usando o * é indicada porque fica mais simples para ser compreendida.
+
+### * Exemplo 09
+
+Selecione os parágrafos de uma página html
+
+Para isso, temos que usar uma expressão regular preguiçosa e não uma expressão regular fominha. A expressão regular preguiçosa seleciona o mínimo necessário, esse modo vai selecionar o texto assim que for encontrado algo que case com o que foi especificado na expressão. O símbolo para a expressão preguiçosa é o '?'
+
+/```<p>.*?</p>```/gm
+
+## Parte III: Operadores Lógicos
+
+### * Exemplo 10
+
+Selecione todos os títulos h2 e h3 da página html
+
+/```<h(3|2)>.*</h(3|2)>```/gm
+
+Foi usado os parenteses para definir um conjunto e o caractere '|' para definir o operador lógico OU
+
+Operador de Negação: 
+selecionar tudo o que não é dígito ```\D``` 
+selecionar tudo o que não é palavra ```\W```
+         
+      
