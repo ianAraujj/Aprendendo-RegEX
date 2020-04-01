@@ -5,6 +5,9 @@ Projeto que apresenta as sintaxe básica das Expressões Regulares e também a c
 
 [regexr.com](https://regexr.com/)
 
+## Site para exercícios
+[Regex Cross word](https://regexcrossword.com/)
+
 ## O que é RegEX (regular expressions)
 Expressões Regulares são usadas para identificar um padrão em uma string. É uma forma matemática usada para calcular e identificar certos caracteres usados para definir padrões numa cadeira de caracteres (strings).
 
@@ -102,8 +105,30 @@ Selecione todos os títulos h2 e h3 da página html
 
 Foi usado os parenteses para definir um conjunto e o caractere '|' para definir o operador lógico OU
 
+### * Exemplo 11
+
+Selecione tudo que não for 'a', 'e' e 'i'
+
+Para selecionar tudo o que tiver 'a', 'e' e 'i' fazemos: /```[aei]```/gm
+
+A negação disso fica: /```[^aei]```/gm
+
 Operador de Negação: 
 selecionar tudo o que não é dígito ```\D``` 
 selecionar tudo o que não é palavra ```\W```
-         
-      
+
+### * Exemplo 12
+
+Selecione na lista telefônica todas as Vitórias que tiverem o sobrenome Medeiros.
+
+/Vitória\s(?=Medeiros)/gm
+
+A Negação disso, ou seja, todas as Vitórias que não tiverem o sobrenome Medeiros, seria: /Vitória\s(?!Medeiros)/gm
+
+### * Exemplo 13
+
+Selecione no texto as palavras que estão duplicadas uma após a outra, por exemplo, "Estado ```da da``` arte com foco ...". Essa seleção pode ser usada como maneira de correção ortográfica.
+
+/\b(\w+)\s\1\b/gm
+
+O \b é um delimitador de palavras, limitando o início e o fim da palavra. o \1 faz referência ao primeiro grupo definido '(\w+)', um grupo está sempre entre parenteses. Em outras palavras, no texto o que tem em '(\w+)' tem que ser IGUAL ao que tem em \1
