@@ -26,7 +26,7 @@ Esse exemplo pode ser traduzido parar: /```[I][a][n]\s[L][u][c][c][a][s]```/g Re
 
 Esse mesmo exemplo só que considerando letras maiúsculas e minúsculas: /```[Ii][aA][nN]\s[Ll][uU][cC][cC][aA][sS]```/g
 
-Detalhe: Há caracteres que já são especiais para as expressões regulares. A expressão /```.```/g significa qualquer caractere. Caso o caractere '.' faça parte da sua busca, então temos que usar uma barra invertida antes do caractere especial, assim '/\\\./g'
+Detalhe: Há caracteres que já são especiais para as expressões regulares. A expressão /```.```/g significa qualquer caractere. Caso o caractere '.' faça parte da sua busca, então temos que usar uma barra invertida antes do caractere especial, assim '/```\.```/g'
 
 ### * Exemplo 02: 
 
