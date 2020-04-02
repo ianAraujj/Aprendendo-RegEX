@@ -130,3 +130,9 @@ Selecione no texto as palavras que estão duplicadas uma após a outra, por exem
 /```\b(\w+)\s\1\b``` /gm
 
 O \b é um delimitador de palavras, limitando o início e o fim da palavra. o \1 faz referência ao primeiro grupo definido '(\w+)', um grupo está sempre entre parenteses. Em outras palavras, no texto o que tem em '(\w+)' tem que ser IGUAL ao que tem em \1
+
+### * Refazendo o Exemplo 10
+
+No caso da solução dada pelo exemplo 10, se na página html tivesse algo do tipo: <h2> Parágrafo <\h3> A expressão iria selecionar. Para resolver esse problema, usando uma referência
+  
+/```<h(3|2)>.*</h\1>```/gm
