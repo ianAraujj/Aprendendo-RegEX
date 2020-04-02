@@ -133,6 +133,6 @@ O \b é um delimitador de palavras, limitando o início e o fim da palavra. o \1
 
 ### * Refazendo o Exemplo 10
 
-No caso da solução dada pelo exemplo 10, se na página html tivesse algo do tipo: <h2> Parágrafo <\h3> A expressão iria selecionar. Para resolver esse problema, usando uma referência
+No caso da solução dada pelo exemplo 10, se na página html tivesse algo do tipo: ```<h2> Parágrafo <\h3>``` A expressão iria selecionar. Para resolver esse problema, usando uma referência
   
 /```<h(3|2)>.*</h\1>```/gm
