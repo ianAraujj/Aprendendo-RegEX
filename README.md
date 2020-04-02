@@ -1,5 +1,5 @@
 # Aprendendo-RegEX
-O Projeto é um programa em python que encontra emails em uma página WEB. Abaixo é apresentado as sintaxe básica das Expressões Regulares e também a classe Regex.
+O Projeto é um programa em python que encontra emails em uma página WEB. Abaixo é apresentado a sintaxe básica das Expressões Regulares e também a classe Regex.
 
 ## Site para testar
 
