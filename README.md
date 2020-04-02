@@ -16,6 +16,7 @@ Uma expressão regular pode definir um padrão de busca em um documento.
 ## Aplicações RegEX
 * Lista telefônica
 * Código genético
+* Corretor ortográfico
 
 ## Parte I: Apresentação dos Metacaracteres
 ### * Exemplo 01: Busca Literal
